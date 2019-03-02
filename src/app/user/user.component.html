@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-sm-2">
+
+      <div *ngIf="users">
+      <ul class="list-group">
+        <li class="list-group-item"
+          *ngFor="let user of users"
+          (click)="selectUser(user)"
+          [class.active]="user === activeUser">
+          {{ user.name }} ({{ user.id }})
+          <button class="delete" title="delete hero"
+          (click)="delete(user)">x</button>    
+        </li>
+      </ul>
+      </div>
+
+    </div>
+
+<div class="col-sm-8">
+ 
+    <app-user-detail [user]="activeUser"></app-user-detail>
+   
+    
+    <div align="center" class="jumbotron" *ngIf="!activeUser">
+   
+      <span class="glyphicon glyphicon-hand-left"></span>
+      <h2>Choose a User</h2>
+    </div>
+   
+</div>
+
+
+<!-- <ul>
+    <li *ngFor="let user of users">
+    <a [routerLink]="['/user', user.id]">
+    <span >{{user.id}}</span> {{user.name}}
+    </a>
+    <button class="delete" title="delete hero"
+    (click)="delete(user)">x</button>    
+</li>
+</ul> --> 
+<!---<div>
+        <label>Hero name:
+          <input #userName />
+        </label>
+        <label>email:
+          <input #userEmail />
+        </label>  
+        <button (click)="add(userName.value, userEmail.value); userName.value=''">
+          add
+        </button>
+      </div> -->
+      
+
+
+<!-- <app-user-detail [user]="selectedUser"></app-user-detail>> -->.

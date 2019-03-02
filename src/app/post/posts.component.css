@@ -1,0 +1,28 @@
+.well {
+    background: #95e2ff;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 60%;
+    height: 230px; 
+    margin: 50px;
+}
+
+.user img {
+    width: 10%; 
+    border: 2px solid #95e2ff;
+}
+
+.user {
+    text-align: left;   
+}
+
+.main {
+    background: #ffffff;
+    border: 1px solid #95e2ff;
+    padding: 10px; 
+    width: auto;
+    height: auto; 
+    font-style: oblique;
+    text-align: center;
+}

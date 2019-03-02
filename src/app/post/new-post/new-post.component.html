@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<form (ngSubmit)="publish()">
+    
+        <div class="row">
+            <div class="col-xs-3">
+          <label>Input post title</label>
+          <input type="title" class="form-control" name="title" 
+            [(ngModel)]="model.title">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Post description</label>
+          <input type="descript" class="form-control" name="descript" 
+            [(ngModel)]="model.descript">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Post content</label>
+          <input style="height:100px" type="main" class="form-control" name="main" 
+            [(ngModel)]="model.main">
+        </div>     
+      </div>
+
+      
+      <div class="form-group">
+        <button type="submit" class="btn btn-info">Post</button>
+      </div>
+</form>
+

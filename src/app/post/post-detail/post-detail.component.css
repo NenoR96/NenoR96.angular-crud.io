@@ -1,0 +1,61 @@
+.well {
+    background:#95e2ff;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    text-align: left;
+    width: 100%;
+    height: 220px; 
+    margin: 10px;
+}
+
+.jumbotron {
+    background: #95e2ff;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 100%;
+    height: 130px; 
+    margin: 50px;
+}
+
+.comment {
+    background: #ffffff;
+    border: 1px solid #95e2ff;
+    padding: 10px; 
+    width: auto;
+    height: auto; 
+    font-style: oblique;
+    }
+
+.commetMain {
+    background: #000000;
+    border: 15px solid #95e2ff;
+    padding: 10px; 
+    width: auto;
+    height: auto; 
+}
+
+.post {
+    background: #ffffff;
+    border: 1px solid #95e2ff;
+    padding: 25px; 
+    width: 100%;
+    height: 90%; 
+    font-style: oblique;
+    text-align: center;
+}
+
+.postmain{
+    background-color: #95e2ff;
+}
+
+.userpost img {
+    width: 15%;
+    border: 2px solid #95e2ff;    
+}
+
+.user img {
+    border: 1px solid #95e2ff;    
+    text-align: left;
+    width: 10%;
+}

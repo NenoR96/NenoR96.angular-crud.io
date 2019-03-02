@@ -1,0 +1,34 @@
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    padding-right: 0%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 20%;
+    padding-left: 0%;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    border: 2px solid #99ffcc;   
+}
+
+/* Clear floats after the columns */
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,13 @@
+dsaasd
+
+<div *ngFor="let user of users"> 
+    <div class="well" *ngIf="user.id === comment.user"> 
+
+            <div class="user">
+            <a [routerLink]="['/user', user.id]"><img [src]="user.avatar"/></a>
+            {{ user.name }}
+            </div>
+            
+            <div class="comment">{{comment.comment}}</div>
+    </div>
+</div>   

@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="row">
+<div class="col-sm-6">
+<!-- ==================================================== -->
+<div *ngIf="post">
+<div *ngFor="let user of users">
+      <div class="well"  *ngIf="post.user === user.id">  
+
+        <div class="userpost">
+          <a [routerLink]="['/user', user.id]"><img [src]="user.avatar" style="float:left"/></a>
+          {{user.name}}
+        </div>
+        <div class="post">
+          <h1>{{post.title}}</h1> <p>{{post.descript}}</p>
+          <div class="postmain">{{post.main}}</div>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+<form (ngSubmit)="onComment()">
+
+    <div class="form-group">
+      <label>Write comment..</label>
+      <input type="" class="form-control" name="comment" 
+        [(ngModel)]="data">
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-info">Comment</button>
+    </div>
+    
+    </form>
+</div>
+<!-- ==================================================== -->
+<div class="col-sm-5">
+<div *ngFor="let comment of comments">
+  <div *ngIf="comment.postid === post.id">
+      <div *ngFor="let user of users">
+          <div class="jumbotron"*ngIf="comment.user === user.id">
+            <div class="user">
+              <a [routerLink]="['/user', user.id]"><img [src]="user.avatar"/></a>
+              {{ user.name }}
+              <div class="comment">{{comment.comment}}</div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ==================================================== -->
+</div>

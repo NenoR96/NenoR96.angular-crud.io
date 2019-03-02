@@ -1,0 +1,49 @@
+<div *ngIf="adminView()">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="row">
+  <div *ngIf="user">
+      <div class="col-sm-6"> 
+          <div class="well">
+              <div class="card" >
+                  <img src="assets/img_avatar3.jpg" alt="Avatar" style="width:100%">
+                  <div class="container">
+                      <div>
+                        <label>Name:
+                        <input [(ngModel)]="user.name" placeholder="name">
+                        </label>
+                      </div>
+            
+                      <div>
+                          <label>Email:
+                          <input [(ngModel)]="user.email" placeholder="email">
+                          </label>
+                      </div>
+            
+                      <div>
+                          <label>Password:
+                          <input [(ngModel)]="user.pass" placeholder="password">
+                          </label>
+                      </div>
+                </div>
+                <div class="text-center"><button type="button" class="btn btn-success" (click)="saveUser()">save</button></div>            
+                </div>
+              </div>   
+      </div>
+
+
+      <div class="col-sm-6">
+        <ul class="list-group" *ngFor="let post of posts">
+          <li class="list-group-item" *ngIf="post.user === user.id">
+              <div align="center"><a [routerLink]="['/posts', post.id]">
+                <b>{{ post.title }}</b>
+                <p>{{ post.descript }}</p>
+                <div>Posted at: {{ post.createdAt }}</div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        </div>
+</div>
+</div>
